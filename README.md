@@ -6,3 +6,5 @@ Recon sdk is not working properly in factory reset Goggles, cause this recon sdk
 In this way developped apps can access the Internet.
 
 This has to be rewritten from scratch.
+
+HUDConnectivityManager: main class fot communications. Holds queues for sending commands.
