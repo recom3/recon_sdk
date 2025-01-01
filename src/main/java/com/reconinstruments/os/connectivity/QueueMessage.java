@@ -1,7 +1,7 @@
 package com.reconinstruments.os.connectivity;
 
 /**
- * Created by Chus on 31/01/2023.
+ * Created by Recom3 on 31/01/2023.
  */
 
 public class QueueMessage {

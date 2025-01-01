@@ -5,12 +5,19 @@ package com.reconinstruments.os.connectivity;
  */
 
 public interface IHUDConnectivity {
-    public enum ConnectionState {
-        a, b, c, d, e;
+    enum ConnectionState {
+        STOPPED,
+        LISTENING,
+        CONNECTED,
+        CONNECTING,
+        DISCONNECTED
     }
 
-    public enum NetworkEvent {
-        a, b, c, d;
+    enum NetworkEvent {
+        LOCAL_WEB_GAINED,
+        LOCAL_WEB_LOST,
+        REMOTE_WEB_GAINED,
+        REMOTE_WEB_LOST
     }
 
     void onConnectionStateChanged(ConnectionState paramConnectionState);

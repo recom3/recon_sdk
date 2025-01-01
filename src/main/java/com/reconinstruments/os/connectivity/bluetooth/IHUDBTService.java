@@ -1,7 +1,7 @@
 package com.reconinstruments.os.connectivity.bluetooth;
 
 /**
- * Created by Chus on 16/01/2023.
+ * Created by Recom3 on 16/01/2023.
  */
 
 import com.reconinstruments.os.connectivity.IHUDConnectivity;
