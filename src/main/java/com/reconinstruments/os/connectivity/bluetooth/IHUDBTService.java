@@ -1,21 +1,31 @@
 package com.reconinstruments.os.connectivity.bluetooth;
 
-/**
- * Created by Recom3 on 16/01/2023.
- */
+import java.io.IOException;
 
-import com.reconinstruments.os.connectivity.IHUDConnectivity;
+import com.reconinstruments.os.connectivity.IHUDConnectivity.ConnectionState;
+import com.reconinstruments.os.connectivity.bluetooth.HUDBTBaseService.OutputStreamContainer;
 
-import java.io.OutputStream;
-
+/** {@hide}*/
 public interface IHUDBTService {
-    IHUDConnectivity.ConnectionState a();
+    public void addConsumer(IHUDBTConsumer hudBTConsumer);
 
-    void a(HUDBTBaseService.OutputStreamContainer paramHUDBTBaseService$OutputStreamContainer);
+    public void removeConsumer(IHUDBTConsumer hudBTConsumer);
 
-    void a(HUDBTBaseService.OutputStreamContainer paramHUDBTBaseService$OutputStreamContainer, byte[] paramArrayOfbyte);
+    public ConnectionState getState();
 
-    void a(IHUDBTConsumer paramIHUDBTConsumer);
+    public String getDeviceName();
 
-    HUDBTBaseService.OutputStreamContainer d();
+    public void connect(String address) throws IOException;
+
+    public void disconnect() throws IOException;
+
+    public void startListening() throws IOException;
+
+    public void stopListening() throws IOException;
+
+    public void write(OutputStreamContainer osContainer, byte[] buffer) throws Exception;
+
+    public OutputStreamContainer obtainOutputStreamContainer() throws InterruptedException;
+
+    public void releaseOutputStreamContainer(OutputStreamContainer osContainer);
 }

@@ -5,5 +5,5 @@ package com.reconinstruments.os.connectivity.bluetooth;
  */
 
 public interface IHUDBTConsumer {
-    boolean a(byte[] paramArrayOfbyte1, byte[] paramArrayOfbyte2, byte[] paramArrayOfbyte3);
+    public boolean consumeBTData(byte[] header, byte[] payload, byte[] body);
 }
