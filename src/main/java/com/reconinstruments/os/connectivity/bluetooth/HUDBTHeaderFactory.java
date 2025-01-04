@@ -64,6 +64,7 @@ public class HUDBTHeaderFactory {
         return header[VERSION_IDX];
     }
 
+    //getMsgId
     public static byte getRequestID(byte[] header) {
         return header[REQUEST_ID_IDX];
     }
@@ -80,10 +81,12 @@ public class HUDBTHeaderFactory {
         return header[APPLICATION_IDX];
     }
 
+    //e
     public static byte getCmd(byte[] header) {
         return header[CMD_IDX];
     }
 
+    //f
     public static byte getArg1(byte[] header) {
         return header[ARG1_IDX];
     }
@@ -127,6 +130,7 @@ public class HUDBTHeaderFactory {
         return getInt(header, BODY_LEN_BASE_IDX);
     }
 
+    //a
     public static void setRequestID(byte[] header, byte requestID) {
         header[REQUEST_ID_IDX] = requestID;
     }
@@ -184,6 +188,7 @@ public class HUDBTHeaderFactory {
         return header;
     }
 
+    //a
     public static byte[] getErrorHeader() {
         byte[] header = getBaseHeader(false, MESSAGE_TYPE__ONEWAY);
 
@@ -206,6 +211,7 @@ public class HUDBTHeaderFactory {
     /**
      * @return a update command (header) for the network status
      */
+    //byte[] a(boolean paramBoolean, byte paramByte)
     public static byte[] getUpdateNetworkHeaderResponse(boolean hasNetwork, byte requestID) {
         byte[] header = getCmdHeader(MESSAGE_TYPE__RESPONSE);
 
@@ -250,6 +256,7 @@ public class HUDBTHeaderFactory {
     /**
      * @return a response header to transmit Internet response
      */
+    //adquireHeader2
     public static byte[] getInternetResponseHeader(int responseLength, int bodyLength) {
         byte[] header = getBaseHeader(true, MESSAGE_TYPE__RESPONSE);
 

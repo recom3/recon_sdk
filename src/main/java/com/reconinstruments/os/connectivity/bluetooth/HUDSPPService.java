@@ -25,7 +25,8 @@ import java.util.concurrent.ArrayBlockingQueue;
 public class HUDSPPService extends HUDBTBaseService {
 
     /* UUIDs reserved for connectivity */
-    private static final String[] UUIDS = {
+    //!!!This should be private
+    public static final String[] UUIDS = {
             "3007e231-e2af-4742-bcc4-70648bf22599",
             "798e999d-5fe8-4199-bc03-ab87f8545f1a",
             "5ed5a87f-15af-44c4-affc-9cbb686486e5",
