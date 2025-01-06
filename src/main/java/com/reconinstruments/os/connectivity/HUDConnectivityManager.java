@@ -79,8 +79,11 @@ public class HUDConnectivityManager implements IHUDConnectivity {
         //mHandler = new ConnectivityHandler(mHUDConnectivity);
         //!!!
         //mHUDBTService = new HUDBTService(this, isHUD, forceBTEnable, appUniqueName, hudRequestUUID, phoneRequestUUID);
-        mHUDBTService = new HUDSPPService(this, 0);
-        mHUDHttpBTConnection = new HUDHttpBTConnection(context, this, isHUD, mHUDBTService);
+
+        //Commented as are initiallythed in HUDConnectivityPhoneConnection for example
+        //!!!
+        //mHUDBTService = new HUDSPPService(this, 1);
+        //mHUDHttpBTConnection = new HUDHttpBTConnection(context, this, isHUD, mHUDBTService);
     }
 
     /** {@hide} */

@@ -1,2 +1,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.recom3.reconsdk" />
+    package="com.recom3.reconsdk">
+
+    <!--<permission android:name="android.permission.INTERNET" />-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application>
+        <service
+        android:name="com.reconinstruments.hudserver.HUDWebService"
+        android:enabled="true">
+        <intent-filter>
+            <action android:name="com.reconinstruments.os.connectivity.HUDWEBSERVICE" />
+        </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

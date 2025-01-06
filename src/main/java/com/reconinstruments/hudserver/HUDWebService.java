@@ -287,7 +287,7 @@ public class HUDWebService extends Service {
         try {
             HUDConnectivityManager hUDConnectivityManager = this.hudConnectivityManager;
             hUDConnectivityManager.mHandler = new HUDConnectivityManager.ConnectivityHandler();
-            hUDConnectivityManager.mHUDConnectivityConnection = new HUDConnectivityPhoneConnection(this, hUDConnectivityManager, 0);
+            hUDConnectivityManager.mHUDConnectivityConnection = new HUDConnectivityPhoneConnection(this, hUDConnectivityManager, 1);
 
             boolean useNewBTConn = true;
 
